@@ -1,0 +1,8 @@
+{
+  "name": "TrueSight AI - Media Integrity",
+  "description": "Advanced deepfake detection and media integrity analysis powered by Gemini 3.0 Pro. Analyze images for digital artifacts, lighting inconsistencies, and generative AI traits.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}
