@@ -122,7 +122,7 @@ const App: React.FC = () => {
                 <span className="flex items-center gap-2 hover:text-brand-400 transition-colors cursor-pointer"><Shield size={14} /> Forensics</span>
             </div>
             <div className="h-4 w-px bg-gray-800 hidden md:block"></div>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://github.com/uwddhruv" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
             </a>
           </div>
