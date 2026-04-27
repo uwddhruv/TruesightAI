@@ -44,7 +44,8 @@ const App: React.FC = () => {
       setAppState(AppState.RESULT);
     } catch (err) {
       console.error(err);
-      setErrorMsg("Analysis failed. Please ensure the image is valid and try again.");
+      const errorMessage = err instanceof Error ? err.message : "Analysis failed. Please ensure the image is valid and try again.";
+      setErrorMsg(`Analysis failed: ${errorMessage}`);
       setAppState(AppState.ERROR);
     }
   };

@@ -1,7 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AnalysisResult } from "../types";
 
-const apiKey = process.env.API_KEY;
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY || process.env.API_KEY || process.env.GEMINI_API_KEY;
 
 if (!apiKey || apiKey === 'undefined') {
   console.warn("WARNING: GEMINI_API_KEY is not set or undefined. API calls will fail.");
