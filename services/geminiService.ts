@@ -1,7 +1,13 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AnalysisResult } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey = process.env.API_KEY;
+
+if (!apiKey || apiKey === 'undefined') {
+  console.warn("WARNING: GEMINI_API_KEY is not set or undefined. API calls will fail.");
+}
+
+const ai = new GoogleGenAI({ apiKey: apiKey || 'MISSING_API_KEY' });
 
 export const analyzeMediaIntegrity = async (base64Image: string): Promise<AnalysisResult> => {
   try {
